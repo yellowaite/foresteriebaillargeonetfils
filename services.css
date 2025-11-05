@@ -1,0 +1,291 @@
+/* Services Page Styles - Compatible avec le style Aerial */
+
+/* Allow scrolling on services page */
+body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+#wrapper {
+    height: auto !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* Blur the background for services page */
+#bg {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+/* Override fixed positioning for services page */
+#main {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh;
+    overflow: visible !important;
+}
+
+#header {
+    position: relative !important;
+    top: 0 !important;
+    padding-top: 4em;
+    margin-bottom: 2em;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+#services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 2em 8em 2em;
+    position: relative;
+    z-index: 2;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: dotted 1px #fff;
+    opacity: 0.75;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.back-link:hover {
+    opacity: 1;
+    border-color: transparent;
+}
+
+.service-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    margin-bottom: 3em;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: fadeInUp 0.8s ease-out;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+    flex-direction: row-reverse;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.service-image {
+    flex: 0 0 45%;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    flex: 1;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-content h2 {
+    font-size: 2em;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.75em;
+    letter-spacing: -0.025em;
+}
+
+.service-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5em;
+    line-height: 1.75em;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.5em 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.service-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.contact-section {
+    background: rgba(0, 0, 0, 0.6);
+    border: solid 2px rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    padding: 3em;
+    text-align: center;
+    margin-top: 4em;
+    animation: fadeInUp 0.8s 0.6s ease-out backwards;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.025em;
+}
+
+.contact-section p {
+    font-size: 1.25em;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1.5em;
+}
+
+.contact-section nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-section nav li {
+    display: inline-block;
+}
+
+.contact-section nav a {
+    display: inline-block;
+    width: 3.5em;
+    height: 3.5em;
+    line-height: 3.5em;
+    border: solid 1px #fff;
+    border-radius: 100%;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-section nav a:hover {
+    background-color: rgba(255, 255, 255, 0.175);
+    transform: scale(1.1);
+}
+
+.contact-section nav a:before {
+    font-size: 1.5em;
+}
+
+/* Footer positioning for scrollable page */
+#footer {
+    position: relative !important;
+    margin-top: 4em;
+}
+
+@media screen and (max-width: 980px) {
+    .service-card {
+        flex-direction: column !important;
+    }
+    
+    .service-image {
+        flex: 0 0 300px;
+        max-height: 300px;
+    }
+    
+    .service-content {
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #services-container {
+        padding: 1em 1em 6em 1em;
+    }
+    
+    .service-card {
+        margin-bottom: 2em;
+    }
+    
+    .service-image {
+        flex: 0 0 200px;
+        max-height: 200px;
+    }
+    
+    .service-content {
+        padding: 1.5em;
+    }
+    
+    .service-content h2 {
+        font-size: 1.5em;
+    }
+    
+    .contact-section {
+        padding: 2em 1.5em;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.75em;
+    }
+    
+    .contact-section p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-content h2 {
+        font-size: 1.35em;
+    }
+    
+    .service-features li {
+        font-size: 0.9em;
+    }
+    
+    .contact-section nav ul {
+        flex-wrap: wrap;
+    }
+}
+
+/* Background fixe et flou pour page services */
+#bg {
+    animation: none !important;
+    transform: none !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
