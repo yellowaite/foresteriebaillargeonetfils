@@ -1139,7 +1139,7 @@ input, select, textarea {
 }
 
 #bg {
-    background: #348cb2 url("images/bg.jpg") center center;
+    background: #348cb2 url("bg.jpg") center center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
