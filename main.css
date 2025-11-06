@@ -125,7 +125,7 @@ input, select, textarea {
 /* Logo */
  	.logo-container {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
     z-index: 10;
 }
