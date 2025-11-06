@@ -198,6 +198,19 @@
 		top: 0;
 		width: 100%;
 	}
+/* Logo */
+	.logo-container {
+	    position: absolute;
+	    top: 20px;
+	    left: 20px;
+	    z-index: 10;
+	}
+	
+	.logo-container img {
+	    height: 60px;
+	    width: auto;
+	    display: block;
+	}
 
 /* BG */
 
