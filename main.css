@@ -1321,12 +1321,12 @@ input, select, textarea {
 
 	@media screen and (max-width: 1280px) {
     .header-text {
-        margin-top: -6em;
+        margin-top: -11em;
     }
 }
 
 	@media screen and (max-width: 736px) {
 	    .header-text {
-	        margin-top: -5em;
+	        margin-top: -10em;
 	    }
 	}
