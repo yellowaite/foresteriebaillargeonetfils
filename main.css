@@ -1321,15 +1321,15 @@ input, select, textarea {
    	 	}
 	}	
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 480px) {
 	    .header-text {
 	        margin-top: -4em;
 	    }
 	}
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (min-width:481px) and (max-width:768px) {
    		 .header-text {
-        	margin-top: -2.5em;
+        	margin-top: -8em;
 	    }
 	}
 
