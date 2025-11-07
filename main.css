@@ -735,6 +735,10 @@ input, select, textarea {
 					display: none;
 				}
 
+		nav ul li a.icon {
+		    background: rgba(255, 255, 255, 0.4);
+		}
+
 /* Footer */
 
 	#footer {
