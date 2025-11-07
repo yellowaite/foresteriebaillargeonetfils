@@ -1219,44 +1219,38 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 736px) {
-    /* Animation spécifiquement pour tablette */
-    @keyframes bgParallaxMobile {
+    /* Animation tablette (comme mobile/PC, sans débordement visible) */
+    @keyframes bgParallaxTablet {
         0% {
-            transform: translate3d(0, 0, 0) scale(1.35);
+            transform: translate3d(0, 0, 0) scale(1.3);
         }
         50% {
-            transform: translate3d(-25px, -20px, 0) scale(1.37);
+            transform: translate3d(-35px, -25px, 0) scale(1.33);
         }
         100% {
-            transform: translate3d(0, 0, 0) scale(1.35);
+            transform: translate3d(0, 0, 0) scale(1.3);
         }
     }
 
-    /* Réglages sûrs pour éviter la ligne blanche clignotante */
     #bg {
-        animation: bgParallaxMobile 40s ease-in-out infinite;
-        background-size: cover;
-        background-position: center center;
-
-        /* On agrandit légèrement pour éviter d'apercevoir le bord */
-        width: 105%;
-        height: 105%;
-        left: -2.5%;
-        top: -2.5%;
-
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 102vw;   /* vw au lieu de %, pour forcer débordement total écran */
+        height: 102vh;  /* idem */
+        overflow: hidden;
         transform-origin: center center;
-
-        /* Optimisations GPU et rendu */
         backface-visibility: hidden;
         will-change: transform;
-        transform-style: preserve-3d;
+        animation: bgParallaxTablet 40s ease-in-out infinite;
+        background-position: center center;
+        background-size: cover;
 
-        /* Empêche l'apparition de débordements visibles */
-        overflow: hidden;
+        /* Empêche le flash blanc sur le bord */
+        background-color: #000; /* sécurité visuelle */
     }
 
-    /* Désactive les particules sur tablette */
+    /* Supprime les particules pour tablette */
     #bg::after {
         display: none;
     }
