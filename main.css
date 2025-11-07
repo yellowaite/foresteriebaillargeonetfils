@@ -1317,15 +1317,10 @@ input, select, textarea {
         animation: vignetteEffect 30s ease-in-out infinite;
         opacity: 0.4;
     }
-}
+}	
 
-	
-
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 1024px) {
 	    .header-text {
 	        margin-top: -4em;
 	    }
-		#header p {
-        margin-bottom: 3em; 
-    }
 	}
