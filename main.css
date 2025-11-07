@@ -1220,9 +1220,22 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 736px) {
+    /* Animation réduite pour tablette - évite le blanc sur les bords */
+    @keyframes bgParallaxMobile {
+        0% {
+            transform: translate3d(0, 0, 0) scale(1.15);
+        }
+        50% {
+            transform: translate3d(-30px, -20px, 0) scale(1.18);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) scale(1.15);
+        }
+    }
+    
     #bg {
-        /* Animation légère sur tablette */
-        animation: bgParallax 50s ease-in-out infinite;
+        animation: bgParallaxMobile 50s ease-in-out infinite;
+        background-size: cover;
     }
     
     #bg::after {
@@ -1232,11 +1245,22 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 480px) {
+    /* Animation encore plus réduite pour petit mobile */
+    @keyframes bgParallaxSmall {
+        0% {
+            transform: translate3d(0, 0, 0) scale(1.2);
+        }
+        50% {
+            transform: translate3d(-20px, -15px, 0) scale(1.22);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) scale(1.2);
+        }
+    }
+    
     #bg {
         background-position: center center;
-        /* Animation activée même sur petit mobile */
-        animation: bgParallax 60s ease-in-out infinite;
-        transform: scale(1.05);
+        animation: bgParallaxSmall 60s ease-in-out infinite;
     }
     
     #bg::before {
