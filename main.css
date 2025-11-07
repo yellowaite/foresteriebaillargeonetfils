@@ -1329,7 +1329,7 @@ input, select, textarea {
 
 	@media screen and (min-width:481px) and (max-width:768px) {
    		 .header-text {
-        	margin-top: -8em;
+        	margin-top: -18em;
 	    }
 	}
 
