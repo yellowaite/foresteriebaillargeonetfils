@@ -81,7 +81,9 @@ input, select, textarea {
 
 	body {
 		background: #fff;
-		overflow: hidden;
+		overflow-y: auto;
+		overscroll-behavior-y: contain;
+		
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
