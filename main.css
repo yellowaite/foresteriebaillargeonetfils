@@ -217,19 +217,20 @@ input, select, textarea {
     display: inline-block;
     padding: 0.75em 2em;
     background: rgba(255, 255, 255, 0.85); /* fond très clair */
-    border: none;
+    border: 2px solid #fff;
     border-radius: 6px;
     color: #222; /* texte foncé pour contraste */
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ombre douce */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* ombre douce */
     transition: all 0.3s ease;
 }
 
 	.page-links a:hover {
     background: #fff;
     color: #000;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* BG */
